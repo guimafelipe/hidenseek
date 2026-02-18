@@ -14,14 +14,14 @@ func _process(delta: float) -> void:
 func _input(event) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
-			print("Clicked at: ", event.position)
-			print("Clicked globally at: ", event.global_position)
-			print("My position:", self.position)
+			check_click(event.position)
 
 func do_success():
 	print("Success!!")
 	pass
 
 func check_click(input_position: Vector2) -> void:
-	if self.position.distance_to(input_position) < DISTANCE_TO_BE_CORRECT:
+	var dist = self.position.distance_to(input_position)
+	print(dist)
+	if dist < DISTANCE_TO_BE_CORRECT:
 		do_success()

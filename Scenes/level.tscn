@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dexe21ystudex"]
 
 [ext_resource type="Script" uid="uid://b6powxgm72okf" path="res://Scenes/devil.gd" id="1_tumq0"]
+[ext_resource type="Script" uid="uid://dxmux6u37jch8" path="res://Scenes/eyes_animation.gd" id="2_81xng"]
+[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="2_k5f4k"]
+[ext_resource type="Script" uid="uid://b700a7gp6qq64" path="res://Scenes/eyelid.gd" id="4_wqkje"]
 
 [node name="Level" type="Node2D" unique_id=1649889972]
 
@@ -16,3 +19,19 @@ text = "##"
 [node name="Devil" type="Node2D" parent="." unique_id=652921443]
 position = Vector2(674, 335)
 script = ExtResource("1_tumq0")
+
+[node name="EyesAnimation" type="Node2D" parent="." unique_id=1384674716]
+script = ExtResource("2_81xng")
+
+[node name="UpperLid" type="Sprite2D" parent="EyesAnimation" unique_id=599366134]
+texture = ExtResource("2_k5f4k")
+centered = false
+offset = Vector2(0, 128)
+script = ExtResource("4_wqkje")
+
+[node name="LowerLid" type="Sprite2D" parent="EyesAnimation" unique_id=2113645726]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(559, 103)
+texture = ExtResource("2_k5f4k")
+centered = false
+script = ExtResource("4_wqkje")

@@ -13,7 +13,6 @@ config_version=5
 config/name="hidenseek"
 run/main_scene="uid://dexe21ystudex"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-boot_splash/image="uid://c6cmnvhrgoc0i"
 config/icon="res://icon.svg"
 
 [dotnet]
