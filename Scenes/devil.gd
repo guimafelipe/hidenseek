@@ -1,5 +1,7 @@
 extends Node2D
 
+signal found
+var already_found := false
 @export var DISTANCE_TO_BE_CORRECT : float = 50.0
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +18,10 @@ func _input(event) -> void:
 			check_click(event.position)
 
 func do_success():
-	print("Success!!")
-	pass
+	if already_found:
+		return
+	already_found = true
+	found.emit()
 
 func check_click(input_position: Vector2) -> void:
 	var dist = self.position.distance_to(input_position)

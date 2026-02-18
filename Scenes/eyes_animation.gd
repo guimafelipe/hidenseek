@@ -4,6 +4,9 @@ extends Node2D
 @onready var upper_lid = $UpperLid
 @export var BLINK_DURATION = 0.5
 
+signal closed_eyes
+signal opened_eyes
+
 func set_eyelids_correct_size(eyelid: Sprite2D, width: float, height: float) -> void:
 	var scale_x = width/eyelid.texture.get_width()
 	var scale_y = height/eyelid.texture.get_height()
@@ -12,12 +15,14 @@ func set_eyelids_correct_size(eyelid: Sprite2D, width: float, height: float) -> 
 
 func close_eyes() -> void:
 	var viewport_rect = get_viewport_rect()
-	var screen_height = viewport_rect.size.y
+	var center = viewport_rect.get_center().y
 	
 	var upper_tween = self.create_tween()
 	var lower_tween = self.create_tween()
-	lower_tween.tween_property(lower_lid, "global_position", Vector2(0,screen_height), BLINK_DURATION)
-	upper_tween.tween_property(upper_lid, "global_position", Vector2(0,0), BLINK_DURATION)
+	lower_tween.tween_property(lower_lid, "global_position", Vector2(0, center), BLINK_DURATION)
+	upper_tween.tween_property(upper_lid, "global_position", Vector2(0, center), BLINK_DURATION)
+	await upper_tween.finished
+	closed_eyes.emit()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,7 +42,5 @@ func _ready() -> void:
 	var lower_tween = self.create_tween()
 	lower_tween.tween_property(lower_lid, "global_position", Vector2(0,screen_height), BLINK_DURATION)
 	upper_tween.tween_property(upper_lid, "global_position", Vector2(0,0), BLINK_DURATION)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	await upper_tween.finished
+	opened_eyes.emit()
