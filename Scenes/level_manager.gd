@@ -2,6 +2,7 @@ extends Node2D
 class_name LevelBase
 
 var waiting_for_next: bool = false
+var current_level
 
 func go_next():
 	if not waiting_for_next:
@@ -9,7 +10,9 @@ func go_next():
 	waiting_for_next = false
 	$EyesAnimation.close_eyes()
 	await $EyesAnimation.closed_eyes
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	var next_level = str(current_level+1)
+	print("Next level:", next_level)
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_" + next_level + ".tscn")
 
 func devil_found():
 	var devil_animation_tween = self.create_tween()
@@ -27,5 +30,5 @@ func _ready() -> void:
 	var viewport_rect := get_viewport_rect()
 	var vertical_offset = viewport_rect.size.y + $DevilAnimation.texture.get_height()
 	$DevilAnimation.global_position = Vector2(viewport_rect.get_center().x, vertical_offset)
-	var current_level := self.name.substr(6).to_int() # Level#, we want only the number
+	current_level = self.name.substr(5).to_int() # Level#, we want only the number
 	GameProgressManager.current_level = current_level
