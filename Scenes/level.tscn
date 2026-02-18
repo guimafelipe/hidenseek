@@ -1,28 +1,19 @@
 [gd_scene format=3 uid="uid://dexe21ystudex"]
 
 [ext_resource type="Script" uid="uid://c1qsu2nl24ytx" path="res://Scenes/level_manager.gd" id="1_81xng"]
-[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://brr661jipartu" path="res://Scenes/devil.tscn" id="2_wqkje"]
 [ext_resource type="PackedScene" uid="uid://c8ddiwpd14si8" path="res://Scenes/eyes_animation.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bddcmhodlbpoe" path="res://Scenes/devil_animation.tscn" id="3_81xng"]
 
 [node name="Level" type="Node2D" unique_id=1649889972]
 script = ExtResource("1_81xng")
-
-[node name="LvlNumber" type="Label" parent="." unique_id=915576122]
-offset_left = 9.0
-offset_top = 5.0
-offset_right = 49.0
-offset_bottom = 28.0
-text = "##"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=271692418]
 
 [node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("2_wqkje")]
 position = Vector2(674, 335)
 
-[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("3_6phgx")]
-
-[node name="DevilAnimation" type="Sprite2D" parent="." unique_id=441030725]
+[node name="DevilAnimation" parent="." unique_id=107483872 instance=ExtResource("3_81xng")]
 position = Vector2(640, 887)
-scale = Vector2(2, 2)
-texture = ExtResource("2_k5f4k")
+
+[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("3_6phgx")]

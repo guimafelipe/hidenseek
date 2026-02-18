@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bddcmhodlbpoe"]
+
+[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="1_bx2p5"]
+
+[node name="DevilAnimation" type="Sprite2D" unique_id=107483872]
+scale = Vector2(2, 2)
+texture = ExtResource("1_bx2p5")

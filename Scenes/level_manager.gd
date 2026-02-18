@@ -1,4 +1,5 @@
 extends Node2D
+class_name LevelBase
 
 var waiting_for_next: bool = false
 
@@ -21,10 +22,10 @@ func _input(event: InputEvent) -> void:
 	if event.is_action("mouse_click"):
 		go_next()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Devil.found.connect(devil_found)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	var viewport_rect := get_viewport_rect()
+	var vertical_offset = viewport_rect.size.y + $DevilAnimation.texture.get_height()
+	$DevilAnimation.global_position = Vector2(viewport_rect.get_center().x, vertical_offset)
+	var current_level := self.name.substr(6).to_int() # Level#, we want only the number
+	GameProgressManager.current_level = current_level
