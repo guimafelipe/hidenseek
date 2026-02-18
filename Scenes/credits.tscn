@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bvq4mbe065pxg"]
+
+[ext_resource type="Script" uid="uid://yufy7w3td5k3" path="res://Scenes/credits.gd" id="1_r18jl"]
+
+[node name="Credits" type="Control" unique_id=915386014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r18jl")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=391634225]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1845635672]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="CreditsText" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1503953144]
+clip_contents = false
+layout_mode = 2
+text = "Art and game design: Faye Wirth
+Programming: Felipe Guimaraes
+Thank you for playing! <3"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=34748294]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

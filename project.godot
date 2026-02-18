@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="hidenseek"
-run/main_scene="uid://dexe21ystudex"
+run/main_scene="uid://dlvtmyr5q2dmi"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameProgressManager="*uid://bil7qfcyxxukj"
+SceneLoader="*uid://cph5pjl4ug4vf"
 
 [dotnet]
 
