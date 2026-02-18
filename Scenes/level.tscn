@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dexe21ystudex"]
+
+[ext_resource type="Script" uid="uid://b6powxgm72okf" path="res://Scenes/devil.gd" id="1_tumq0"]
+
+[node name="Level" type="Node2D" unique_id=1649889972]
+
+[node name="LvlNumber" type="Label" parent="." unique_id=915576122]
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 49.0
+offset_bottom = 28.0
+text = "##"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=271692418]
+
+[node name="Devil" type="Node2D" parent="." unique_id=652921443]
+position = Vector2(674, 335)
+script = ExtResource("1_tumq0")
