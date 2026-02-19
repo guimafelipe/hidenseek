@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameProgressManager="*uid://bil7qfcyxxukj"
+GlobalAudioManager="*uid://bg2de4ikhnvao"
 
 [display]
 
