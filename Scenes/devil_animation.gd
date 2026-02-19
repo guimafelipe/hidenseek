@@ -4,10 +4,10 @@ signal lines_ended
 
 var is_active := false
 var is_devil_found := false
-var lines: Array[String]
+var lines: PackedStringArray
 var current_line := 0
 
-func set_lines(_lines : Array[String]) -> void:
+func set_lines(_lines : PackedStringArray) -> void:
 	lines = _lines
 	current_line = 0
 	$ChatBox.text = lines[0]
