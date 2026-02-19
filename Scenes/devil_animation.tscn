@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://bddcmhodlbpoe"]
 
 [ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="1_bx2p5"]
+[ext_resource type="Script" uid="uid://u7v1m03sh733" path="res://Scenes/devil_animation.gd" id="2_jotw0"]
 
 [node name="DevilAnimation" type="Sprite2D" unique_id=107483872]
 scale = Vector2(2, 2)
 texture = ExtResource("1_bx2p5")
+script = ExtResource("2_jotw0")
+
+[node name="ChatBox" type="Label" parent="." unique_id=761162083]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -87.0
+offset_right = -13.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Lorem ipsum"
+horizontal_alignment = 1

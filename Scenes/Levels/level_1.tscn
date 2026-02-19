@@ -7,6 +7,7 @@
 
 [node name="Level1" type="Node2D" unique_id=1446416100]
 script = ExtResource("1_tlcug")
+demon_lines = Array[String](["Oi, como vai voce?", "Eu vou bem!", "Vamos brincar?"])
 metadata/_custom_type_script = "uid://c1qsu2nl24ytx"
 
 [node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("2_3mqfk")]
