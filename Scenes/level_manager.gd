@@ -1,8 +1,7 @@
 extends Node2D
 class_name LevelBase
 
-var current_level
-
+var current_level: int
 var demon_lines: PackedStringArray
 
 func go_next():
@@ -18,12 +17,17 @@ func devil_found():
 func _on_devil_lines_ended() -> void:
 	go_next()
 
+func _input(event: InputEvent) -> void:
+	if event.is_action("back"):
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
 func _ready() -> void:
 	current_level = self.name.substr(5).to_int() # Level#, we want only the number
-	GameProgressManager.current_level = current_level
+	GameProgressManager.set_max_level_reached(current_level)
 	
 	var lines = FileAccess.open("res://Assets/DemonLines/lines_" + str(current_level) + ".txt", FileAccess.READ)
 	var content = lines.get_as_text()
+	lines.close()
 	demon_lines = content.split("\n", false)
 	
 	$Devil.found.connect(devil_found)
