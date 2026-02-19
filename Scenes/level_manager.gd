@@ -18,7 +18,7 @@ func _on_devil_lines_ended() -> void:
 	go_next()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("back"):
+	if event.is_action_pressed("back"):
 		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
 func _ready() -> void:

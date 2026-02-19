@@ -32,7 +32,7 @@ func show_next_line() -> void:
 func _input(event: InputEvent) -> void:
 	if not is_active:
 		return
-	if event.is_action("mouse_click"):
+	if event.is_action_pressed("mouse_click"):
 		show_next_line()
 
 func devil_found():

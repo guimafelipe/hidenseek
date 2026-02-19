@@ -13,9 +13,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event) -> void:
-	if event is InputEventMouseButton:
-		if event.pressed:
-			check_click(event.position)
+	if event.is_action_pressed("mouse_click"):
+		check_click(event.position)
 
 func do_success():
 	if already_found:
