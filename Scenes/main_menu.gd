@@ -3,6 +3,9 @@ extends Control
 func _ready() -> void:
 	if GameProgressManager.max_level_reached > 1:
 		$VBoxContainer/ContinueButton.visible = true
+	if GameProgressManager.max_level_reached == GameProgressManager.last_level:
+		# todo: change credits button
+		pass
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("back"):

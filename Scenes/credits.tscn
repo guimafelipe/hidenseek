@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bvq4mbe065pxg"]
 
 [ext_resource type="Script" uid="uid://yufy7w3td5k3" path="res://Scenes/credits.gd" id="1_r18jl"]
+[ext_resource type="PackedScene" uid="uid://brr661jipartu" path="res://Scenes/devil.tscn" id="2_ccovl"]
+[ext_resource type="PackedScene" uid="uid://bddcmhodlbpoe" path="res://Scenes/devil_animation.tscn" id="3_1bamb"]
 
 [node name="Credits" type="Control" unique_id=915386014]
 layout_mode = 3
@@ -43,5 +45,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Back"
+
+[node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("2_ccovl")]
+visible = false
+position = Vector2(1135, 133)
+
+[node name="DevilAnimation" parent="." unique_id=107483872 instance=ExtResource("3_1bamb")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
