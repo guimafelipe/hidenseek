@@ -3,13 +3,19 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eneon"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_cx1d5"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_eneon"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 vertical = true
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_q0u26"]
+content_margin_left = 20.0
+content_margin_right = 20.0
 thickness = 5
 vertical = true
 
