@@ -24,7 +24,6 @@ func close_eyes() -> void:
 	await upper_tween.finished
 	closed_eyes.emit()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var viewport_rect = get_viewport_rect()
 	var center = viewport_rect.get_center().y

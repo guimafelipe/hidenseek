@@ -58,7 +58,6 @@ func devil_found():
 	move_animation(true)
 	animate_line()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$ChatBox.visible_ratio = 0
 	var viewport_rect := get_viewport_rect()

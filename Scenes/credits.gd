@@ -1,6 +1,5 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if GameProgressManager.max_level_reached == GameProgressManager.last_level:
 		var lines = FileAccess.open("res://Assets/DemonLines/lines_credits.txt", FileAccess.READ)

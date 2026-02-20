@@ -27,7 +27,6 @@ func set_max_level_reached(value: int) -> void:
 	max_level_reached = value
 	save()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_game()
 	var levels = ResourceLoader.list_directory("res://Scenes/Levels")
