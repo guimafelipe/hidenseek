@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://c4wkg5o6f2khj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eneon"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_cx1d5"]
+color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_eneon"]
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_q0u26"]
+thickness = 5
+vertical = true
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxEmpty_eneon")
+Button/styles/hover = SubResource("StyleBoxLine_cx1d5")
+Button/styles/normal = SubResource("StyleBoxLine_eneon")
+Button/styles/pressed = SubResource("StyleBoxLine_q0u26")
