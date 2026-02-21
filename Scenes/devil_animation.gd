@@ -17,6 +17,7 @@ func set_lines(_lines : PackedStringArray) -> void:
 func animate_line() -> void:
 	is_active = false
 	chat_box.visible_ratio = 0
+	GlobalAudioManager.demon_talk()
 	var tween = self.create_tween()
 	tween.tween_property(chat_box, "visible_ratio", 1, 1)
 	await tween.finished
