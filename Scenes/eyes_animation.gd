@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var lower_lid = $LowerLid
 @onready var upper_lid = $UpperLid
-@export var BLINK_DURATION = 0.5
+@export var BLINK_DURATION = 0.75
 
 signal closed_eyes
 signal opened_eyes
@@ -22,6 +22,8 @@ func close_eyes() -> void:
 	lower_tween.tween_property(lower_lid, "global_position", Vector2(0, center), BLINK_DURATION)
 	upper_tween.tween_property(upper_lid, "global_position", Vector2(0, center), BLINK_DURATION)
 	await upper_tween.finished
+	var timer = get_tree().create_timer(0.2)
+	await timer.timeout
 	closed_eyes.emit()
 
 func _ready() -> void:
