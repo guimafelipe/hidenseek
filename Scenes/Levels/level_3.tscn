@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dd746ym772end"]
+
+[ext_resource type="Script" uid="uid://c1qsu2nl24ytx" path="res://Scenes/level_manager.gd" id="1_rc141"]
+[ext_resource type="Texture2D" uid="uid://dsy7eehcby6sp" path="res://Assets/Art/room_3.png" id="2_rc141"]
+[ext_resource type="PackedScene" uid="uid://brr661jipartu" path="res://Scenes/devil.tscn" id="3_167vu"]
+[ext_resource type="PackedScene" uid="uid://bddcmhodlbpoe" path="res://Scenes/devil_animation.tscn" id="4_x1k1j"]
+[ext_resource type="PackedScene" uid="uid://c8ddiwpd14si8" path="res://Scenes/eyes_animation.tscn" id="5_4ahh4"]
+
+[node name="Level3" type="Node2D" unique_id=1446416100]
+script = ExtResource("1_rc141")
+metadata/_custom_type_script = "uid://c1qsu2nl24ytx"
+
+[node name="Room" type="Sprite2D" parent="." unique_id=1032806211]
+texture = ExtResource("2_rc141")
+centered = false
+
+[node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("3_167vu")]
+position = Vector2(1247, 627)
+DISTANCE_TO_BE_CORRECT = 70.0
+
+[node name="DevilAnimation" parent="." unique_id=107483872 instance=ExtResource("4_x1k1j")]
+
+[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("5_4ahh4")]
