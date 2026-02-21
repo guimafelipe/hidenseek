@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://bddcmhodlbpoe"]
 
-[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="1_bx2p5"]
+[ext_resource type="Texture2D" uid="uid://ckibomndlp8na" path="res://Assets/Art/demon_talking.png" id="2_f6tc7"]
 [ext_resource type="Script" uid="uid://u7v1m03sh733" path="res://Scenes/devil_animation.gd" id="2_jotw0"]
 
 [node name="DevilAnimation" type="Node2D" unique_id=2006660035]
 script = ExtResource("2_jotw0")
 
 [node name="DemonSprite" type="Sprite2D" parent="." unique_id=406727960]
-scale = Vector2(2, 2)
-texture = ExtResource("1_bx2p5")
+position = Vector2(-255.99997, -99)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_f6tc7")
 
 [node name="ChatBox" type="Label" parent="." unique_id=761162083]
 anchors_preset = 7
@@ -17,9 +18,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -70.0
-offset_top = 101.0
+offset_top = 166.0
 offset_right = 71.0
-offset_bottom = 152.0
+offset_bottom = 217.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0)
