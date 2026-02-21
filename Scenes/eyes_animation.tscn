@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://c8ddiwpd14si8"]
 
 [ext_resource type="Script" uid="uid://dxmux6u37jch8" path="res://Scenes/eyes_animation.gd" id="1_qju6s"]
-[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="2_jccx5"]
+[ext_resource type="Texture2D" uid="uid://bjjnbjr8m1hym" path="res://Assets/Art/eyes_closed.png" id="2_qju6s"]
 
 [node name="EyesAnimation" type="Node2D" unique_id=2136002833]
 script = ExtResource("1_qju6s")
 
 [node name="UpperLid" type="Sprite2D" parent="." unique_id=2082384848]
-texture = ExtResource("2_jccx5")
+texture = ExtResource("2_qju6s")
 centered = false
 offset = Vector2(0, 128)
 
 [node name="LowerLid" type="Sprite2D" parent="." unique_id=1180461442]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(559, 103)
-texture = ExtResource("2_jccx5")
+texture = ExtResource("2_qju6s")
 centered = false
