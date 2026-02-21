@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvq4mbe065pxg"]
 
 [ext_resource type="Script" uid="uid://yufy7w3td5k3" path="res://Scenes/credits.gd" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://dmvv0ml0suy55" path="res://Assets/Art/menu_bg.png" id="2_1bamb"]
 [ext_resource type="PackedScene" uid="uid://brr661jipartu" path="res://Scenes/devil.tscn" id="2_ccovl"]
 [ext_resource type="PackedScene" uid="uid://bddcmhodlbpoe" path="res://Scenes/devil_animation.tscn" id="3_1bamb"]
 
@@ -12,6 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r18jl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2111951260]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1bamb")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=391634225]
 layout_mode = 1
