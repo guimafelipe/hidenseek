@@ -6,8 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_agy0p"]
 shader = ExtResource("2_ftbmt")
-shader_parameter/is_active = false
-shader_parameter/blur_amount = 2.0
+shader_parameter/blur_amount = 0.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_udql8"]
 size = Vector2(1280, 720)
