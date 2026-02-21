@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1qsu2nl24ytx" path="res://Scenes/level_manager.gd" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://brr661jipartu" path="res://Scenes/devil.tscn" id="2_3mqfk"]
+[ext_resource type="Texture2D" uid="uid://b4gtk36tpyfrf" path="res://Assets/Art/room_1.png" id="2_cyadu"]
 [ext_resource type="PackedScene" uid="uid://c8ddiwpd14si8" path="res://Scenes/eyes_animation.tscn" id="3_iixi8"]
 [ext_resource type="PackedScene" uid="uid://bddcmhodlbpoe" path="res://Scenes/devil_animation.tscn" id="4_iixi8"]
 
@@ -9,8 +10,13 @@
 script = ExtResource("1_tlcug")
 metadata/_custom_type_script = "uid://c1qsu2nl24ytx"
 
+[node name="Room" type="Sprite2D" parent="." unique_id=1758250926]
+texture = ExtResource("2_cyadu")
+centered = false
+
 [node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("2_3mqfk")]
-position = Vector2(122, 436)
+position = Vector2(481, 507)
+DISTANCE_TO_BE_CORRECT = 250.0
 
 [node name="DevilAnimation" parent="." unique_id=107483872 instance=ExtResource("4_iixi8")]
 

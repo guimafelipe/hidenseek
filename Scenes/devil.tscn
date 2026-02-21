@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://brr661jipartu"]
 
 [ext_resource type="Script" uid="uid://b6powxgm72okf" path="res://Scenes/devil.gd" id="1_ct0k0"]
-[ext_resource type="Texture2D" uid="uid://c6cmnvhrgoc0i" path="res://icon.svg" id="2_0gtg8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ct0k0"]
 
 [node name="Devil" type="Node2D" unique_id=1994970345]
 script = ExtResource("1_ct0k0")
 
 [node name="TestSprite" type="Sprite2D" parent="." unique_id=1535793028]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_0gtg8")
+texture = SubResource("PlaceholderTexture2D_ct0k0")
