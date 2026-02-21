@@ -20,7 +20,10 @@ thickness = 5
 vertical = true
 
 [resource]
+Button/font_sizes/font_size = 42
 Button/styles/disabled = SubResource("StyleBoxEmpty_eneon")
 Button/styles/hover = SubResource("StyleBoxLine_cx1d5")
 Button/styles/normal = SubResource("StyleBoxLine_eneon")
 Button/styles/pressed = SubResource("StyleBoxLine_q0u26")
+Label/font_sizes/font_size = 44
+RichTextLabel/font_sizes/normal_font_size = 40

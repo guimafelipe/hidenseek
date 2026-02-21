@@ -12,6 +12,6 @@ metadata/_custom_type_script = "uid://c1qsu2nl24ytx"
 [node name="Devil" parent="." unique_id=1994970345 instance=ExtResource("2_ovj6s")]
 position = Vector2(153, 62)
 
-[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("3_8qsmg")]
-
 [node name="DevilAnimation" parent="." unique_id=107483872 instance=ExtResource("4_fphuk")]
+
+[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("3_8qsmg")]

@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 signal lines_ended
 
@@ -7,16 +7,18 @@ var is_devil_found := false
 var lines: PackedStringArray
 var current_line := 0
 
+var chat_box : Label
+
 func set_lines(_lines : PackedStringArray) -> void:
 	lines = _lines
 	current_line = 0
-	$ChatBox.text = lines[0]
+	chat_box.text = lines[0]
 
 func animate_line() -> void:
 	is_active = false
-	$ChatBox.visible_ratio = 0
+	chat_box.visible_ratio = 0
 	var tween = self.create_tween()
-	tween.tween_property($ChatBox, "visible_ratio", 1, 1)
+	tween.tween_property(chat_box, "visible_ratio", 1, 1)
 	await tween.finished
 	is_active = true
 
@@ -27,7 +29,7 @@ func move_animation(up: bool) -> void:
 		destination = get_viewport_rect().get_center()
 	else:
 		var destination_y = get_viewport_rect().size.y
-		destination_y += self.texture.get_size().y
+		destination_y += $DemonSprite.texture.get_size().y
 		destination = Vector2(get_viewport_rect().get_center().x, destination_y)
 		
 	
@@ -36,7 +38,7 @@ func move_animation(up: bool) -> void:
 
 func show_next_line() -> void:
 	if current_line + 1 < lines.size():
-		$ChatBox.text = lines[current_line + 1]
+		chat_box.text = lines[current_line + 1]
 		current_line = current_line + 1
 		animate_line()
 	else:
@@ -59,8 +61,9 @@ func devil_found():
 	animate_line()
 
 func _ready() -> void:
-	$ChatBox.visible_ratio = 0
+	chat_box = $ChatBox
+	chat_box.visible_ratio = 0
 	var viewport_rect := get_viewport_rect()
-	var vertical_offset = viewport_rect.size.y + texture.get_height()
+	var vertical_offset = viewport_rect.size.y + $DemonSprite.texture.get_height()
 	global_position = Vector2(viewport_rect.get_center().x, vertical_offset)
 	

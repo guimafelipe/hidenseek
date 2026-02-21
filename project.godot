@@ -33,6 +33,7 @@ project/assembly_name="hidenseek"
 [gui]
 
 theme/custom="uid://c4wkg5o6f2khj"
+theme/custom_font="uid://c2sdtbiyuhacn"
 
 [input]
 
