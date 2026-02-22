@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bddcmhodlbpoe"]
 
-[ext_resource type="Texture2D" uid="uid://ckibomndlp8na" path="res://Assets/Art/demon_talking.png" id="2_f6tc7"]
+[ext_resource type="Texture2D" uid="uid://cgc8826dyvdnv" path="res://Assets/Art/demon_talking.png" id="2_f6tc7"]
 [ext_resource type="Shader" uid="uid://dqx6jt7xciadg" path="res://Assets/room_blur.gdshader" id="2_ftbmt"]
 [ext_resource type="Script" uid="uid://u7v1m03sh733" path="res://Scenes/devil_animation.gd" id="2_jotw0"]
 
@@ -22,7 +22,7 @@ centered = false
 [node name="DemonPivot" type="Node2D" parent="." unique_id=916939647]
 
 [node name="DemonSprite" type="Sprite2D" parent="DemonPivot" unique_id=406727960]
-position = Vector2(-255.99997, -99)
+position = Vector2(18.000061, -12.999985)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_f6tc7")
 
