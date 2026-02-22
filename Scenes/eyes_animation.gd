@@ -11,7 +11,6 @@ func set_eyelids_correct_size(eyelid: Sprite2D, width: float, height: float) -> 
 	var scale_x = width/eyelid.texture.get_width()
 	var scale_y = height/eyelid.texture.get_height()
 	eyelid.scale = Vector2(scale_x, scale_y)
-	print(eyelid.scale)
 
 func close_eyes() -> void:
 	var viewport_rect = get_viewport_rect()

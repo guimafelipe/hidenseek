@@ -2,7 +2,7 @@ extends Node2D
 
 signal lines_ended
 
-const max_blur := 1.5
+const max_blur := 3.0
 const devil_animation_duration := 0.2
 const blur_change_duration := 1.0
 

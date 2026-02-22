@@ -7,7 +7,7 @@ func go_next():
 	$EyesAnimation.close_eyes()
 	await $EyesAnimation.closed_eyes
 	var next_level = str(current_level+1)
-	print("Next level:", next_level)
+	# print("Next level:", next_level)
 	get_tree().change_scene_to_file("res://Scenes/Levels/level_" + next_level + ".tscn")
 
 func _on_devil_lines_ended() -> void:

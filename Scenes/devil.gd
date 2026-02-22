@@ -26,6 +26,5 @@ func do_success():
 
 func check_click(input_position: Vector2) -> void:
 	var dist = self.position.distance_to(input_position)
-	print(dist)
 	if dist < DISTANCE_TO_BE_CORRECT:
 		do_success()

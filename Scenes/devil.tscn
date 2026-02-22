@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://b6powxgm72okf" path="res://Scenes/devil.gd" id="1_ct0k0"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ct0k0"]
+size = Vector2(50, 50)
 
 [node name="Devil" type="Node2D" unique_id=1994970345]
 script = ExtResource("1_ct0k0")
 
 [node name="TestSprite" type="Sprite2D" parent="." unique_id=1535793028]
+modulate = Color(1, 1, 1, 0.4)
 texture = SubResource("PlaceholderTexture2D_ct0k0")
