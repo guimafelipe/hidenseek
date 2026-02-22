@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	if GameProgressManager.max_level_reached == GameProgressManager.last_level:
+		$Background.texture = ResourceLoader.load("res://Assets/Art/credits_w_demon.png")
 		var lines = FileAccess.open("res://Assets/DemonLines/lines_credits.txt", FileAccess.READ)
 		var content = lines.get_as_text()
 		lines.close()
