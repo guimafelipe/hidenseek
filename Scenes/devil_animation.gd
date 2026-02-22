@@ -24,9 +24,12 @@ func set_lines(_lines : PackedStringArray) -> void:
 func animate_line() -> void:
 	is_active = false
 	chat_box.visible_ratio = 0
+	var chars := chat_box.text.length()
+	var tween_time :float = 0.1 * chars
+	tween_time = min(1.0, tween_time)
 	GlobalAudioManager.demon_talk()
 	var tween = self.create_tween()
-	tween.tween_property(chat_box, "visible_ratio", 1, 1)
+	tween.tween_property(chat_box, "visible_ratio", 1, tween_time)
 	await tween.finished
 	is_active = true
 
