@@ -20,6 +20,8 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	current_level = self.name.substr(5).to_int() # Level#, we want only the number
 	GameProgressManager.set_max_level_reached(current_level)
+	if current_level == GameProgressManager.last_level:
+		return
 	
 	var lines = FileAccess.open("res://Assets/DemonLines/lines_" + str(current_level) + ".txt", FileAccess.READ)
 	var content = lines.get_as_text()

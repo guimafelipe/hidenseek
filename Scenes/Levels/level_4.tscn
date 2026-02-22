@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvjgb1r2b21vv"]
+
+[ext_resource type="Script" uid="uid://c1qsu2nl24ytx" path="res://Scenes/level_manager.gd" id="1_jqrsn"]
+[ext_resource type="Texture2D" uid="uid://ct7hmw6h4ud1g" path="res://Assets/Art/room_4.png" id="2_6grq2"]
+[ext_resource type="PackedScene" uid="uid://c8ddiwpd14si8" path="res://Scenes/eyes_animation.tscn" id="5_keyqw"]
+
+[node name="Level4" type="Node2D" unique_id=1446416100]
+script = ExtResource("1_jqrsn")
+metadata/_custom_type_script = "uid://c1qsu2nl24ytx"
+
+[node name="Room" type="Sprite2D" parent="." unique_id=1032806211]
+texture = ExtResource("2_6grq2")
+centered = false
+
+[node name="EyesAnimation" parent="." unique_id=2136002833 instance=ExtResource("5_keyqw")]
